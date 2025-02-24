@@ -1,5 +1,7 @@
 package com.example.htttdl.modal;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,6 +23,7 @@ public class Huyen {
 
     @ManyToOne
     @JoinColumn(name = "T_ID")
+    @JsonIgnore
     private Tinh tinh;
 
     public String getTenHuyen() {
