@@ -8,38 +8,40 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "dinhmucKhoangCach")
+@Table(name = "DINHMUCKHOANGCACH")
 public class DinhMucKhoangCach {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "DMKC_ID")
-    private Integer id;
+    private int id;
     @Column(name = "DMKC_GIOIHANDUOI")
-    private Float gioiHanDuoi;
-    @Column(name = "DMKC_GIOIHANDUOI")
-    private Float gioiHanTren;
+    private float gioiHanDuoi;
+    @Column(name = "DMKC_GIOIHANTREN")
+    private float gioiHanTren;
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Float getGioiHanDuoi() {
-        return gioiHanDuoi;
-    }
+	public float getGioiHanDuoi() {
+		return gioiHanDuoi;
+	}
 
-    public void setGioiHanDuoi(Float gioiHanDuoi) {
-        this.gioiHanDuoi = gioiHanDuoi;
-    }
+	public void setGioiHanDuoi(float gioiHanDuoi) {
+		this.gioiHanDuoi = gioiHanDuoi;
+	}
 
-    public Float getGioiHanTren() {
-        return gioiHanTren;
-    }
+	public float getGioiHanTren() {
+		return gioiHanTren;
+	}
 
-    public void setGioiHanTren(Float gioiHanTren) {
-        this.gioiHanTren = gioiHanTren;
-    }
+	public void setGioiHanTren(float gioiHanTren) {
+		this.gioiHanTren = gioiHanTren;
+	}
+
+    
 }
