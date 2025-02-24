@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -22,14 +24,18 @@ public class DonGia {
     private Date thoiDiemBatDau;
     @Column(name = "DG_THOIDIEMKETTHUC")
     private Date thoiDiemKetThuc;
-    @Column(name = "DMKC_ID")
+    @ManyToOne
+    @JoinColumn(name = "DMKC_ID")
 
     private DinhMucKhoangCach dinhMucKhoangCach;
-    @Column(name = "DMKL_ID")
+    @ManyToOne
+    @JoinColumn(name = "DMKL_ID")
     private DinhMucKhoiLuong dinhMucKhoiLuong;
-    @Column(name = "HTVC_ID")
+    @ManyToOne
+    @JoinColumn(name = "HTVC_ID")
     private HinhThucVanChuyen hinhThucVanChuyen;
-    @Column(name = "LH_ID")
+    @ManyToOne
+    @JoinColumn(name = "LH_ID")
     private LoaiHang loaiHang;
 
     public Integer getId() {
