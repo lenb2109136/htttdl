@@ -14,7 +14,7 @@ public class Tinh {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "T_ID")
     private Integer id;
-    @Column(name = "T_ID")
+    @Column(name = "T_TEN")
     private String tenTinh;
 
     public Integer getId() {
