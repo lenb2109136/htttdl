@@ -16,8 +16,10 @@ import com.example.htttdl.service.QuanHuyenService;
 public class HuyenController {
 	@Autowired
 	private QuanHuyenService quanHuyenService;
+
 	@GetMapping("/getbytinh")
-	public ResponseEntity<response> getall( @RequestParam("id") int id){
-		return new ResponseEntity<response>(new response(HttpStatus.OK,"ok",quanHuyenService.getAllByTinh(id)),HttpStatus.OK);
+	public ResponseEntity<response> getall(@RequestParam("id") int id) {
+		return new ResponseEntity<response>(new response(HttpStatus.OK, "ok", quanHuyenService.getAllByTinh(id)),
+				HttpStatus.OK);
 	}
 }

@@ -12,8 +12,8 @@ import com.example.htttdl.repository.HuyenRepository;
 public class QuanHuyenService {
 	@Autowired
 	private HuyenRepository huyenRepository;
-	
-	public List<Huyen> getAllByTinh(int id){
+
+	public List<Huyen> getAllByTinh(int id) {
 		return huyenRepository.getHuyenByTinh(id);
 	}
 }

@@ -18,8 +18,10 @@ import com.example.htttdl.service.XaService;
 public class XaController {
 	@Autowired
 	private XaService xaService;
+
 	@GetMapping("/getxabyhuyen")
-	public ResponseEntity<response> getXaByHuyen(int id){
-		return new ResponseEntity<response>(new response(HttpStatus.OK,"ok",xaService.getXaByHuyen(id)),HttpStatus.OK);
+	public ResponseEntity<response> getXaByHuyen(int id) {
+		return new ResponseEntity<response>(new response(HttpStatus.OK, "ok", xaService.getXaByHuyen(id)),
+				HttpStatus.OK);
 	}
 }

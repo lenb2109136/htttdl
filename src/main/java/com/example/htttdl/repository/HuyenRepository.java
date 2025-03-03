@@ -8,8 +8,9 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.example.htttdl.modal.Huyen;
+
 @Repository
-public interface HuyenRepository extends JpaRepository<Huyen, Integer>{
-	@Query(value ="SELECT * FROM quanhuyen WHERE t_id=:id", nativeQuery = true)
+public interface HuyenRepository extends JpaRepository<Huyen, Integer> {
+	@Query(value = "SELECT * FROM quanhuyen WHERE t_id=:id", nativeQuery = true)
 	public List<Huyen> getHuyenByTinh(@Param("id") int id);
 }

@@ -8,20 +8,43 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "phuongxa")
 public class Xa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NotNull(message = "Xã không hợp lệ")
     @Column(name = "PX_ID")
     private Integer id;
     @Column(name = "PX_TEN")
     private String tenXa;
 
+    @Column(name = "PX_vido")
+    private Float viDo;
+    @Column(name = "PX_KINHDO")
+    private Float kinhDo;
+
     @ManyToOne
-    @JoinColumn(name = "H_ID")
+    @JoinColumn(name = "QH_ID")
     private Huyen huyen;
+
+    public Float getViDo() {
+        return viDo;
+    }
+
+    public void setViDo(Float viDo) {
+        this.viDo = viDo;
+    }
+
+    public Float getKinhDo() {
+        return kinhDo;
+    }
+
+    public void setKinhDo(Float kinhDo) {
+        this.kinhDo = kinhDo;
+    }
 
     public String getTenXa() {
         return tenXa;

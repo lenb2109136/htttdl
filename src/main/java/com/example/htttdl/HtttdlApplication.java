@@ -8,8 +8,10 @@ import com.example.htttdl.service.HinhThucVanChuyenService;
 
 @SpringBootApplication
 public class HtttdlApplication {
+
 	@Autowired
 	private HinhThucVanChuyenService hinhThucVanChuyenService;
+
 	public static void main(String[] args) {
 		SpringApplication.run(HtttdlApplication.class, args);
 	}
