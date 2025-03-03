@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 @Table(name = "KHACHHANG")
 public class KhachHang {
 	@Id
-	@Column(name="KH_ID")
+	@Column(name = "KH_ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@ManyToOne
@@ -27,41 +27,61 @@ public class KhachHang {
 	private String diaChi;
 	@Column(name = "KH_CCCD")
 	private String cccd;
+
+	public KhachHang() {
+
+	}
+
+	public KhachHang(Integer id) {
+		this.id = id;
+	}
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public Xa getXa() {
 		return xa;
 	}
+
 	public void setXa(Xa xa) {
 		this.xa = xa;
 	}
+
 	public String getTen() {
 		return ten;
 	}
+
 	public void setTen(String ten) {
 		this.ten = ten;
 	}
+
 	public String getSdt() {
 		return sdt;
 	}
+
 	public void setSdt(String sdt) {
 		this.sdt = sdt;
 	}
+
 	public String getDiaChi() {
 		return diaChi;
 	}
+
 	public void setDiaChi(String diaChi) {
 		this.diaChi = diaChi;
 	}
+
 	public String getCccd() {
 		return cccd;
 	}
+
 	public void setCccd(String cccd) {
 		this.cccd = cccd;
 	}
-	
+
 }
